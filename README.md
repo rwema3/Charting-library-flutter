@@ -88,6 +88,9 @@ The only limitation here is any properties with `function` values is not support
 **A:** I won't answer any question that is not related to integration chart to flutter, if you don't know how to use charting_library ask on their discord/github, not here.
 ##
 
+**Q:** It doesn't work because this example use old version of charting_library.
+
+
 **Q:** Does this work on other WebView packages?
 
 **A:** As long the packages support 2 way communication between dart and JS, Yes. Otherwise, No.
