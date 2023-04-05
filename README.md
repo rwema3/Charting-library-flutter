@@ -86,6 +86,8 @@ The only limitation here is any properties with `function` values is not support
 **Q:** I have error in charting_library side, symbol not exist, etc.
 
 
+**Q:** Does the chart react to theme changes?
+
 **A:** Yes if used under `MaterialApp`, I haven't test it under `CupertinoApp` yet.
 ##
 
