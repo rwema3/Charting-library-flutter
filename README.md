@@ -90,6 +90,9 @@ The only limitation here is any properties with `function` values is not support
 
 **Q:** It doesn't work because this example use old version of charting_library.
 
+**A:** Open new issue. I'll try to update the example with latest available lib version.
+##
+
 
 **Q:** Does this work on other WebView packages?
 
