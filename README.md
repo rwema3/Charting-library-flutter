@@ -85,8 +85,6 @@ The only limitation here is any properties with `function` values is not support
 
 **Q:** I have error in charting_library side, symbol not exist, etc.
 
-
-**A:** You can check the charting_library typedef, and add stuff you needed. Check `(Optional) Adding new types/class`.
 ##
 
 **Q:** How do I add properties with `function` value?
