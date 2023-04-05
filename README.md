@@ -86,6 +86,9 @@ The only limitation here is any properties with `function` values is not support
 **Q:** I have error in charting_library side, symbol not exist, etc.
 
 
+**A:** Yes if used under `MaterialApp`, I haven't test it under `CupertinoApp` yet.
+##
+
 **Q:** There are some types/class I needed that not exist on `tvchart_types.dart` yet. How do I add them?
 
 **A:** You can check the charting_library typedef, and add stuff you needed. Check `(Optional) Adding new types/class`.
