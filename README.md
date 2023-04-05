@@ -85,6 +85,8 @@ The only limitation here is any properties with `function` values is not support
 
 **Q:** I have error in charting_library side, symbol not exist, etc.
 
+**A:** I won't answer any question that is not related to integration chart to flutter, if you don't know how to use charting_library ask on their discord/github, not here.
+##
 
 **Q:** Does this work on other WebView packages?
 
