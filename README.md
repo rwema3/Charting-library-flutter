@@ -86,6 +86,8 @@ The only limitation here is any properties with `function` values is not support
 **Q:** I have error in charting_library side, symbol not exist, etc.
 
 
+**Q:** Does this work on other WebView packages?
+
 **A:** As long the packages support 2 way communication between dart and JS, Yes. Otherwise, No.
 ##
 
