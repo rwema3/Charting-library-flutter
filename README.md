@@ -93,6 +93,7 @@ The only limitation here is any properties with `function` values is not support
 **A:** Open new issue. I'll try to update the example with latest available lib version.
 ##
 
+**Q:** Does this work on Android, iOS, and Web?
 
 **Q:** Does this work on other WebView packages?
 
