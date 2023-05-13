@@ -531,3 +531,8 @@ Favorites _$FavoritesFromJson(Map<String, dynamic> json) => Favorites(
           .map((e) => e as String)
           .toList(),
     );
+
+Map<String, dynamic> _$FavoritesToJson(Favorites instance) => <String, dynamic>{
+      'intervals': instance.intervals,
+      'chartTypes': instance.chartTypes,
+    };
