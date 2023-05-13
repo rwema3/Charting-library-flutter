@@ -579,3 +579,21 @@ AccessList _$AccessListFromJson(Map<String, dynamic> json) => AccessList(
       tools: (json['tools'] as List<dynamic>)
           .map((e) => AccessListItem.fromJson(e as Map<String, dynamic>))
           .toList(),
+    );
+
+Map<String, dynamic> _$AccessListToJson(AccessList instance) =>
+    <String, dynamic>{
+      'type': _$AccessListTypeEnumMap[instance.type],
+      'tools': instance.tools,
+    };
+
+const _$AccessListTypeEnumMap = {
+  AccessListType.black: 'black',
+  AccessListType.white: 'white',
+};
+
+AccessListItem _$AccessListItemFromJson(Map<String, dynamic> json) =>
+    AccessListItem(
+      name: json['name'] as String,
+      grayed: json['grayed'] as bool?,
+    );
