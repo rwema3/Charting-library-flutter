@@ -346,3 +346,26 @@ const _$SeriesFormatEnumMap = {
 
 ChartingLibraryWidgetOptions _$ChartingLibraryWidgetOptionsFromJson(
         Map<String, dynamic> json) =>
+    ChartingLibraryWidgetOptions(
+      interval: json['interval'] as String,
+      symbol: json['symbol'] as String?,
+      autoSaveDelay: json['auto_save_delay'] as int?,
+      autosize: json['autosize'] as bool?,
+      debug: json['debug'] as bool?,
+      disabledFeatures: (json['disabled_features'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      drawingsAccess: json['drawings_access'] == null
+          ? null
+          : AccessList.fromJson(
+              json['drawings_access'] as Map<String, dynamic>),
+      enabledFeatures: (json['enabled_features'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      fullscreen: json['fullscreen'] as bool?,
+      height: json['height'] as int?,
+      locale: json['locale'] as String,
+      numericFormatting: json['numeric_formatting'] == null
+          ? null
+          : NumericFormattingParams.fromJson(
+              json['numeric_formatting'] as Map<String, dynamic>),
