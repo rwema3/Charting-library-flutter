@@ -518,3 +518,16 @@ Map<String, dynamic> _$LoadingScreenOptionsToJson(
       val[key] = value;
     }
   }
+
+  writeNotNull('foregroundColor', instance.foregroundColor);
+  writeNotNull('backgroundColor', instance.backgroundColor);
+  return val;
+}
+
+Favorites _$FavoritesFromJson(Map<String, dynamic> json) => Favorites(
+      intervals:
+          (json['intervals'] as List<dynamic>).map((e) => e as String).toList(),
+      chartTypes: (json['chartTypes'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
