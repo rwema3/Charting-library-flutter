@@ -395,3 +395,19 @@ ChartingLibraryWidgetOptions _$ChartingLibraryWidgetOptionsFromJson(
       timeFrames: json['time_frames'] == null
           ? null
           : TimeFrameItem.fromJson(json['time_frames'] as Map<String, dynamic>),
+      customCssUrl: json['custom_css_url'] as String?,
+      favorites: json['favorites'] == null
+          ? null
+          : Favorites.fromJson(json['favorites'] as Map<String, dynamic>),
+      loadingScreen: json['loading_screen'] == null
+          ? null
+          : LoadingScreenOptions.fromJson(
+              json['loading_screen'] as Map<String, dynamic>),
+      theme: _$enumDecodeNullable(_$ChartThemeEnumMap, json['theme']),
+      compareSymbols: (json['compare_symbols'] as List<dynamic>?)
+          ?.map((e) => CompareSymbol.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$ChartingLibraryWidgetOptionsToJson(
+    ChartingLibraryWidgetOptions instance) {
