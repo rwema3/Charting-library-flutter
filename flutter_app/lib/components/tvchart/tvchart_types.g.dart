@@ -474,3 +474,15 @@ K? _$enumDecodeNullable<K, V>(
 const _$ChartThemeEnumMap = {
   ChartTheme.light: 'Light',
   ChartTheme.dark: 'Dark',
+};
+
+SavedStateMetaInfo _$SavedStateMetaInfoFromJson(Map<String, dynamic> json) =>
+    SavedStateMetaInfo(
+      uid: json['uid'] as int,
+      name: json['name'] as String,
+      description: json['description'] as String,
+    );
+
+Map<String, dynamic> _$SavedStateMetaInfoToJson(SavedStateMetaInfo instance) =>
+    <String, dynamic>{
+      'uid': instance.uid,
