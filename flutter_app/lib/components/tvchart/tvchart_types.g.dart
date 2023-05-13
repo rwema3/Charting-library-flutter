@@ -498,3 +498,9 @@ CompareSymbol _$CompareSymbolFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$CompareSymbolToJson(CompareSymbol instance) =>
     <String, dynamic>{
+      'symbol': instance.symbol,
+      'title': instance.title,
+    };
+
+LoadingScreenOptions _$LoadingScreenOptionsFromJson(
+        Map<String, dynamic> json) =>
