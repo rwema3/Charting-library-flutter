@@ -328,3 +328,21 @@ const _$TimezoneEnumMap = {
   Timezone.europeStockholm: 'Europe/Stockholm',
   Timezone.europeTallinn: 'Europe/Tallinn',
   Timezone.europeVilnius: 'Europe/Vilnius',
+  Timezone.europeWarsaw: 'Europe/Warsaw',
+  Timezone.europeZurich: 'Europe/Zurich',
+  Timezone.pacificAuckland: 'Pacific/Auckland',
+  Timezone.pacificChatham: 'Pacific/Chatham',
+  Timezone.pacificFakaofo: 'Pacific/Fakaofo',
+  Timezone.pacificHonolulu: 'Pacific/Honolulu',
+  Timezone.pacificNorfolk: 'Pacific/Norfolk',
+  Timezone.usMountain: 'US/Mountain',
+  Timezone.exchange: 'exchange',
+};
+
+const _$SeriesFormatEnumMap = {
+  SeriesFormat.price: 'price',
+  SeriesFormat.volume: 'volume',
+};
+
+ChartingLibraryWidgetOptions _$ChartingLibraryWidgetOptionsFromJson(
+        Map<String, dynamic> json) =>
