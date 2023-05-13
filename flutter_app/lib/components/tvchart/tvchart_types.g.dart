@@ -444,3 +444,21 @@ Map<String, dynamic> _$ChartingLibraryWidgetOptionsToJson(
   writeNotNull('width', instance.width);
   writeNotNull('charts_storage_url', instance.chartsStorageUrl);
   writeNotNull('charts_storage_api_version', instance.chartsStorageApiVersion);
+  writeNotNull('client_id', instance.clientId);
+  writeNotNull('user_id', instance.userId);
+  writeNotNull('load_last_chart', instance.loadLastChart);
+  writeNotNull('studies_overrides', instance.studiesOverrides);
+  writeNotNull('overrides', instance.overrides);
+  writeNotNull('snapshot_url', instance.snapshotUrl);
+  writeNotNull('preset', instance.preset);
+  writeNotNull('time_frames', instance.timeFrames);
+  writeNotNull('custom_css_url', instance.customCssUrl);
+  writeNotNull('favorites', instance.favorites);
+  writeNotNull('loading_screen', instance.loadingScreen);
+  writeNotNull('theme', _$ChartThemeEnumMap[instance.theme]);
+  writeNotNull('compare_symbols', instance.compareSymbols);
+  return val;
+}
+
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
