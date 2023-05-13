@@ -462,3 +462,15 @@ Map<String, dynamic> _$ChartingLibraryWidgetOptionsToJson(
 
 K? _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$ChartThemeEnumMap = {
+  ChartTheme.light: 'Light',
+  ChartTheme.dark: 'Dark',
