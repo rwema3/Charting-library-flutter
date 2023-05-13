@@ -95,3 +95,85 @@ Map<String, dynamic> _$DatafeedConfigurationToJson(
   writeNotNull('supported_resolutions', instance.supportedResolutions);
   writeNotNull('currency_codes', instance.currencyCodes);
   writeNotNull('supports_marks', instance.supportsMarks);
+  writeNotNull('supports_time', instance.supportsTime);
+  writeNotNull('supports_timescale_marks', instance.supportsTimescaleMarks);
+  writeNotNull('symbols_types', instance.symbolsTypes);
+  return val;
+}
+
+DatafeedSymbolType _$DatafeedSymbolTypeFromJson(Map<String, dynamic> json) =>
+    DatafeedSymbolType(
+      name: json['name'] as String,
+      value: json['value'] as String,
+    );
+
+Map<String, dynamic> _$DatafeedSymbolTypeToJson(DatafeedSymbolType instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'value': instance.value,
+    };
+
+SearchSymbolResultItem _$SearchSymbolResultItemFromJson(
+        Map<String, dynamic> json) =>
+    SearchSymbolResultItem(
+      symbol: json['symbol'] as String,
+      fullName: json['full_name'] as String,
+      description: json['description'] as String,
+      exchange: json['exchange'] as String,
+      ticker: json['ticker'] as String,
+      type: json['type'] as String,
+    );
+
+Map<String, dynamic> _$SearchSymbolResultItemToJson(
+        SearchSymbolResultItem instance) =>
+    <String, dynamic>{
+      'symbol': instance.symbol,
+      'full_name': instance.fullName,
+      'description': instance.description,
+      'exchange': instance.exchange,
+      'ticker': instance.ticker,
+      'type': instance.type,
+    };
+
+LibrarySymbolInfo _$LibrarySymbolInfoFromJson(Map<String, dynamic> json) =>
+    LibrarySymbolInfo(
+      name: json['name'] as String,
+      fullName: json['full_name'] as String,
+      baseName: (json['base_name'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      ticker: json['ticker'] as String?,
+      description: json['description'] as String,
+      type: json['type'] as String,
+      session: json['session'] as String,
+      sessionDisplay: json['session_display'] as String?,
+      holidays: json['holidays'] as String?,
+      corrections: json['corrections'] as String?,
+      exchange: json['exchange'] as String,
+      listedExchange: json['listed_exchange'] as String,
+      timezone: _$enumDecode(_$TimezoneEnumMap, json['timezone']),
+      format: _$enumDecode(_$SeriesFormatEnumMap, json['format']),
+      pricescale: (json['pricescale'] as num).toDouble(),
+      minmov: (json['minmov'] as num).toDouble(),
+      fractional: json['fractional'] as bool?,
+      minmove2: (json['minmove2'] as num?)?.toDouble(),
+      hasIntraday: json['has_intraday'] as bool?,
+      supportedResolutions: (json['supported_resolutions'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      intradayMultipliers: (json['intraday_multipliers'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      hasSeconds: json['has_seconds'] as bool?,
+      hasTicks: json['has_ticks'] as bool?,
+      secondsMultipliers: (json['seconds_multipliers'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      hasDaily: json['has_daily'] as bool?,
+      hasWeeklyAndMonthly: json['has_weekly_and_monthly'] as bool?,
+      hasEmptyBars: json['has_empty_bars'] as bool?,
+      hasNoVolume: json['has_no_volume'] as bool?,
+      volumePrecision: (json['volume_precision'] as num?)?.toDouble(),
+      dataStatus: json['data_status'] as String?,
+      expired: json['expired'] as bool?,
+      expirationDate: json['expiration_date'] as int?,
