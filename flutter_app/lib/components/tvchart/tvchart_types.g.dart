@@ -223,3 +223,23 @@ Map<String, dynamic> _$LibrarySymbolInfoToJson(LibrarySymbolInfo instance) {
   writeNotNull('has_no_volume', instance.hasNoVolume);
   writeNotNull('volume_precision', instance.volumePrecision);
   writeNotNull('data_status', instance.dataStatus);
+  writeNotNull('expired', instance.expired);
+  writeNotNull('expiration_date', instance.expirationDate);
+  writeNotNull('sector', instance.sector);
+  writeNotNull('industry', instance.industry);
+  writeNotNull('currency_code', instance.currencyCode);
+  writeNotNull('original_currency_code', instance.originalCurrencyCode);
+  return val;
+}
+
+K _$enumDecode<K, V>(
+  Map<K, V> enumValues,
+  Object? source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError(
+      'A value must be provided. Supported values: '
+      '${enumValues.values.join(', ')}',
+    );
+  }
