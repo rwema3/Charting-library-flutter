@@ -411,3 +411,21 @@ ChartingLibraryWidgetOptions _$ChartingLibraryWidgetOptionsFromJson(
 
 Map<String, dynamic> _$ChartingLibraryWidgetOptionsToJson(
     ChartingLibraryWidgetOptions instance) {
+  final val = <String, dynamic>{
+    'interval': instance.interval,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('symbol', instance.symbol);
+  writeNotNull('auto_save_delay', instance.autoSaveDelay);
+  writeNotNull('autosize', instance.autosize);
+  writeNotNull('debug', instance.debug);
+  writeNotNull('disabled_features', instance.disabledFeatures);
+  writeNotNull('drawings_access', instance.drawingsAccess);
+  writeNotNull('enabled_features', instance.enabledFeatures);
+  writeNotNull('fullscreen', instance.fullscreen);
