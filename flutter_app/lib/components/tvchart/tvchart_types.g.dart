@@ -504,3 +504,17 @@ Map<String, dynamic> _$CompareSymbolToJson(CompareSymbol instance) =>
 
 LoadingScreenOptions _$LoadingScreenOptionsFromJson(
         Map<String, dynamic> json) =>
+    LoadingScreenOptions(
+      foregroundColor: json['foregroundColor'] as String?,
+      backgroundColor: json['backgroundColor'] as String?,
+    );
+
+Map<String, dynamic> _$LoadingScreenOptionsToJson(
+    LoadingScreenOptions instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
