@@ -429,3 +429,18 @@ Map<String, dynamic> _$ChartingLibraryWidgetOptionsToJson(
   writeNotNull('drawings_access', instance.drawingsAccess);
   writeNotNull('enabled_features', instance.enabledFeatures);
   writeNotNull('fullscreen', instance.fullscreen);
+  writeNotNull('height', instance.height);
+  val['locale'] = instance.locale;
+  writeNotNull('numeric_formatting', instance.numericFormatting);
+  writeNotNull('saved_data', instance.savedData);
+  writeNotNull('saved_data_meta_info', instance.savedDataMetaInfo);
+  writeNotNull('studies_access', instance.studiesAccess);
+  writeNotNull('study_count_limit', instance.studyCountLimit);
+  writeNotNull(
+      'symbol_search_request_delay', instance.symbolSearchRequestDelay);
+  writeNotNull('timeframe', instance.timeframe);
+  writeNotNull('timezone', _$TimezoneEnumMap[instance.timezone]);
+  writeNotNull('toolbar_bg', instance.toolbarBg);
+  writeNotNull('width', instance.width);
+  writeNotNull('charts_storage_url', instance.chartsStorageUrl);
+  writeNotNull('charts_storage_api_version', instance.chartsStorageApiVersion);
