@@ -554,3 +554,28 @@ Map<String, dynamic> _$TimeFrameItemToJson(TimeFrameItem instance) {
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
       val[key] = value;
+    }
+  }
+
+  writeNotNull('description', instance.description);
+  writeNotNull('title', instance.title);
+  return val;
+}
+
+NumericFormattingParams _$NumericFormattingParamsFromJson(
+        Map<String, dynamic> json) =>
+    NumericFormattingParams(
+      decimalSign: json['decimal_sign'] as String,
+    );
+
+Map<String, dynamic> _$NumericFormattingParamsToJson(
+        NumericFormattingParams instance) =>
+    <String, dynamic>{
+      'decimal_sign': instance.decimalSign,
+    };
+
+AccessList _$AccessListFromJson(Map<String, dynamic> json) => AccessList(
+      type: _$enumDecode(_$AccessListTypeEnumMap, json['type']),
+      tools: (json['tools'] as List<dynamic>)
+          .map((e) => AccessListItem.fromJson(e as Map<String, dynamic>))
+          .toList(),
