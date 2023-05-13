@@ -597,3 +597,18 @@ AccessListItem _$AccessListItemFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String,
       grayed: json['grayed'] as bool?,
     );
+
+Map<String, dynamic> _$AccessListItemToJson(AccessListItem instance) {
+  final val = <String, dynamic>{
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('grayed', instance.grayed);
+  return val;
+}
