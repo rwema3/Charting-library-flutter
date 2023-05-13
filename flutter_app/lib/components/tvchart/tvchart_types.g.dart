@@ -243,3 +243,23 @@ K _$enumDecode<K, V>(
       '${enumValues.values.join(', ')}',
     );
   }
+
+  return enumValues.entries.singleWhere(
+    (e) => e.value == source,
+    orElse: () {
+      if (unknownValue == null) {
+        throw ArgumentError(
+          '`$source` is not one of the supported values: '
+          '${enumValues.values.join(', ')}',
+        );
+      }
+      return MapEntry(unknownValue, enumValues.values.first);
+    },
+  ).key;
+}
+
+const _$TimezoneEnumMap = {
+  Timezone.utc: 'Etc/UTC',
+  Timezone.africaCairo: 'Africa/Cairo',
+  Timezone.africaJohannesburg: 'Africa/Johannesburg',
+  Timezone.africaLagos: 'Africa/Lagos',
