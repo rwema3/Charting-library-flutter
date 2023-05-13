@@ -486,3 +486,15 @@ SavedStateMetaInfo _$SavedStateMetaInfoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$SavedStateMetaInfoToJson(SavedStateMetaInfo instance) =>
     <String, dynamic>{
       'uid': instance.uid,
+      'name': instance.name,
+      'description': instance.description,
+    };
+
+CompareSymbol _$CompareSymbolFromJson(Map<String, dynamic> json) =>
+    CompareSymbol(
+      symbol: json['symbol'] as String,
+      title: json['title'] as String,
+    );
+
+Map<String, dynamic> _$CompareSymbolToJson(CompareSymbol instance) =>
+    <String, dynamic>{
