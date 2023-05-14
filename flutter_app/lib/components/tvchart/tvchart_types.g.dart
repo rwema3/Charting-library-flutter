@@ -234,7 +234,66 @@ Map<String, dynamic> _$LibrarySymbolInfoToJson(LibrarySymbolInfo instance) {
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
+  Object? source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError(
+      'A value must be provided. Supported values: '
+      '${enumValues.values.join(', ')}',
+    );
+  }
 
+  return enumValues.entries.singleWhere(
+    (e) => e.value == source,
+    orElse: () {
+      if (unknownValue == null) {
+        throw ArgumentError(
+          '`$source` is not one of the supported values: '
+          '${enumValues.values.join(', ')}',
+        );
+      }
+      return MapEntry(unknownValue, enumValues.values.first);
+    },
+  ).key;
+}
+
+const _$TimezoneEnumMap = {
+  Timezone.utc: 'Etc/UTC',
+  Timezone.africaCairo: 'Africa/Cairo',
+  Timezone.africaJohannesburg: 'Africa/Johannesburg',
+  Timezone.africaLagos: 'Africa/Lagos',
+  Timezone.americaArgentinaBuenosAires: 'America/Argentina/Buenos_Aires',
+  Timezone.americaBogota: 'America/Bogota',
+  Timezone.americaCaracas: 'America/Caracas',
+  Timezone.americaChicago: 'America/Chicago',
+  Timezone.americaElSalvador: 'America/El_Salvador',
+  Timezone.americaJuneau: 'America/Juneau',
+  Timezone.americaLima: 'America/Lima',
+  Timezone.americaLosAngeles: 'America/Los_Angeles',
+  Timezone.americaMexicoCity: 'America/Mexico_City',
+  Timezone.americaNewYork: 'America/New_York',
+  Timezone.americaPhoenix: 'America/Phoenix',
+  Timezone.americaSantiago: 'America/Santiago',
+  Timezone.americaSaoPaulo: 'America/Sao_Paulo',
+  Timezone.americaToronto: 'America/Toronto',
+  Timezone.americaVancouver: 'America/Vancouver',
+  Timezone.asiaAlmaty: 'Asia/Almaty',
+  Timezone.asiaAshkhabad: 'Asia/Ashkhabad',
+  Timezone.asiaBahrain: 'Asia/Bahrain',
+  Timezone.asiaBangkok: 'Asia/Bangkok',
+  Timezone.asiaChongqing: 'Asia/Chongqing',
+  Timezone.asiaDubai: 'Asia/Dubai',
+  Timezone.asiaHoChiMinh: 'Asia/Ho_Chi_Minh',
+  Timezone.asiaHongKong: 'Asia/Hong_Kong',
+  Timezone.asiaJakarta: 'Asia/Jakarta',
+  Timezone.asiaJerusalem: 'Asia/Jerusalem',
+  Timezone.asiaKathmandu: 'Asia/Kathmandu',
+  Timezone.asiaKolkata: 'Asia/Kolkata',
+  Timezone.asiaKuwait: 'Asia/Kuwait',
+  Timezone.asiaMuscat: 'Asia/Muscat',
+  Timezone.asiaQatar: 'Asia/Qatar',
+  Timezone.asiaRiyadh: 'Asia/Riyadh',
 
 Map<String, dynamic> _$FavoritesToJson(Favorites instance) => <String, dynamic>{
       'intervals': instance.intervals,
