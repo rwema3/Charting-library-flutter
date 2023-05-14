@@ -481,6 +481,56 @@ SavedStateMetaInfo _$SavedStateMetaInfoFromJson(Map<String, dynamic> json) =>
       uid: json['uid'] as int,
       name: json['name'] as String,
       description: json['description'] as String,
+    );
+
+Map<String, dynamic> _$SavedStateMetaInfoToJson(SavedStateMetaInfo instance) =>
+    <String, dynamic>{
+      'uid': instance.uid,
+      'name': instance.name,
+      'description': instance.description,
+    };
+
+CompareSymbol _$CompareSymbolFromJson(Map<String, dynamic> json) =>
+    CompareSymbol(
+      symbol: json['symbol'] as String,
+      title: json['title'] as String,
+    );
+
+Map<String, dynamic> _$CompareSymbolToJson(CompareSymbol instance) =>
+    <String, dynamic>{
+      'symbol': instance.symbol,
+      'title': instance.title,
+    };
+
+LoadingScreenOptions _$LoadingScreenOptionsFromJson(
+        Map<String, dynamic> json) =>
+    LoadingScreenOptions(
+      foregroundColor: json['foregroundColor'] as String?,
+      backgroundColor: json['backgroundColor'] as String?,
+    );
+
+Map<String, dynamic> _$LoadingScreenOptionsToJson(
+    LoadingScreenOptions instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('foregroundColor', instance.foregroundColor);
+  writeNotNull('backgroundColor', instance.backgroundColor);
+  return val;
+}
+
+Favorites _$FavoritesFromJson(Map<String, dynamic> json) => Favorites(
+      intervals:
+          (json['intervals'] as List<dynamic>).map((e) => e as String).toList(),
+      chartTypes: (json['chartTypes'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
 
 Map<String, dynamic> _$FavoritesToJson(Favorites instance) => <String, dynamic>{
       'intervals': instance.intervals,
