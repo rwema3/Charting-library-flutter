@@ -294,6 +294,74 @@ const _$TimezoneEnumMap = {
   Timezone.asiaMuscat: 'Asia/Muscat',
   Timezone.asiaQatar: 'Asia/Qatar',
   Timezone.asiaRiyadh: 'Asia/Riyadh',
+  Timezone.asiaSeoul: 'Asia/Seoul',
+  Timezone.asiaShanghai: 'Asia/Shanghai',
+  Timezone.asiaSingapore: 'Asia/Singapore',
+  Timezone.asiaTaipei: 'Asia/Taipei',
+  Timezone.asiaTehran: 'Asia/Tehran',
+  Timezone.asiaTokyo: 'Asia/Tokyo',
+  Timezone.atlanticReykjavik: 'Atlantic/Reykjavik',
+  Timezone.australiaACT: 'Australia/ACT',
+  Timezone.australiaAdelaide: 'Australia/Adelaide',
+  Timezone.australiaBrisbane: 'Australia/Brisbane',
+  Timezone.australiaPerth: 'Australia/Perth',
+  Timezone.australiaSydney: 'Australia/Sydney',
+  Timezone.europeAmsterdam: 'Europe/Amsterdam',
+  Timezone.europeAthens: 'Europe/Athens',
+  Timezone.europeBelgrade: 'Europe/Belgrade',
+  Timezone.europeBerlin: 'Europe/Berlin',
+  Timezone.europeBrussels: 'Europe/Brussels',
+  Timezone.europeCopenhagen: 'Europe/Copenhagen',
+  Timezone.europeDublin: 'Europe/Dublin',
+  Timezone.europeHelsinki: 'Europe/Helsinki',
+  Timezone.europeIstanbul: 'Europe/Istanbul',
+  Timezone.europeLisbon: 'Europe/Lisbon',
+  Timezone.europeLondon: 'Europe/London',
+  Timezone.europeLuxembourg: 'Europe/Luxembourg',
+  Timezone.europeMadrid: 'Europe/Madrid',
+  Timezone.europeMalta: 'Europe/Malta',
+  Timezone.europeMoscow: 'Europe/Moscow',
+  Timezone.europeOslo: 'Europe/Oslo',
+  Timezone.europeParis: 'Europe/Paris',
+  Timezone.europeRiga: 'Europe/Riga',
+  Timezone.europeRome: 'Europe/Rome',
+  Timezone.europeStockholm: 'Europe/Stockholm',
+  Timezone.europeTallinn: 'Europe/Tallinn',
+  Timezone.europeVilnius: 'Europe/Vilnius',
+  Timezone.europeWarsaw: 'Europe/Warsaw',
+  Timezone.europeZurich: 'Europe/Zurich',
+  Timezone.pacificAuckland: 'Pacific/Auckland',
+  Timezone.pacificChatham: 'Pacific/Chatham',
+  Timezone.pacificFakaofo: 'Pacific/Fakaofo',
+  Timezone.pacificHonolulu: 'Pacific/Honolulu',
+  Timezone.pacificNorfolk: 'Pacific/Norfolk',
+  Timezone.usMountain: 'US/Mountain',
+  Timezone.exchange: 'exchange',
+};
+
+const _$SeriesFormatEnumMap = {
+  SeriesFormat.price: 'price',
+  SeriesFormat.volume: 'volume',
+};
+
+ChartingLibraryWidgetOptions _$ChartingLibraryWidgetOptionsFromJson(
+        Map<String, dynamic> json) =>
+    ChartingLibraryWidgetOptions(
+      interval: json['interval'] as String,
+      symbol: json['symbol'] as String?,
+      autoSaveDelay: json['auto_save_delay'] as int?,
+      autosize: json['autosize'] as bool?,
+      debug: json['debug'] as bool?,
+      disabledFeatures: (json['disabled_features'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      drawingsAccess: json['drawings_access'] == null
+          ? null
+          : AccessList.fromJson(
+              json['drawings_access'] as Map<String, dynamic>),
+      enabledFeatures: (json['enabled_features'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
 
 Map<String, dynamic> _$FavoritesToJson(Favorites instance) => <String, dynamic>{
       'intervals': instance.intervals,
