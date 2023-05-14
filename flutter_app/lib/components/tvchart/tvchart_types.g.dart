@@ -156,6 +156,86 @@ LibrarySymbolInfo _$LibrarySymbolInfoFromJson(Map<String, dynamic> json) =>
       pricescale: (json['pricescale'] as num).toDouble(),
       minmov: (json['minmov'] as num).toDouble(),
       fractional: json['fractional'] as bool?,
+      minmove2: (json['minmove2'] as num?)?.toDouble(),
+      hasIntraday: json['has_intraday'] as bool?,
+      supportedResolutions: (json['supported_resolutions'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      intradayMultipliers: (json['intraday_multipliers'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      hasSeconds: json['has_seconds'] as bool?,
+      hasTicks: json['has_ticks'] as bool?,
+      secondsMultipliers: (json['seconds_multipliers'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      hasDaily: json['has_daily'] as bool?,
+      hasWeeklyAndMonthly: json['has_weekly_and_monthly'] as bool?,
+      hasEmptyBars: json['has_empty_bars'] as bool?,
+      hasNoVolume: json['has_no_volume'] as bool?,
+      volumePrecision: (json['volume_precision'] as num?)?.toDouble(),
+      dataStatus: json['data_status'] as String?,
+      expired: json['expired'] as bool?,
+      expirationDate: json['expiration_date'] as int?,
+      sector: json['sector'] as String?,
+      industry: json['industry'] as String?,
+      currencyCode: json['currency_code'] as String?,
+      originalCurrencyCode: json['original_currency_code'] as String?,
+    );
+
+Map<String, dynamic> _$LibrarySymbolInfoToJson(LibrarySymbolInfo instance) {
+  final val = <String, dynamic>{
+    'name': instance.name,
+    'full_name': instance.fullName,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('base_name', instance.baseName);
+  writeNotNull('ticker', instance.ticker);
+  val['description'] = instance.description;
+  val['type'] = instance.type;
+  val['session'] = instance.session;
+  writeNotNull('session_display', instance.sessionDisplay);
+  writeNotNull('holidays', instance.holidays);
+  writeNotNull('corrections', instance.corrections);
+  val['exchange'] = instance.exchange;
+  val['listed_exchange'] = instance.listedExchange;
+  val['timezone'] = _$TimezoneEnumMap[instance.timezone];
+  val['format'] = _$SeriesFormatEnumMap[instance.format];
+  val['pricescale'] = instance.pricescale;
+  val['minmov'] = instance.minmov;
+  writeNotNull('fractional', instance.fractional);
+  writeNotNull('minmove2', instance.minmove2);
+  writeNotNull('has_intraday', instance.hasIntraday);
+  val['supported_resolutions'] = instance.supportedResolutions;
+  writeNotNull('intraday_multipliers', instance.intradayMultipliers);
+  writeNotNull('has_seconds', instance.hasSeconds);
+  writeNotNull('has_ticks', instance.hasTicks);
+  writeNotNull('seconds_multipliers', instance.secondsMultipliers);
+  writeNotNull('has_daily', instance.hasDaily);
+  writeNotNull('has_weekly_and_monthly', instance.hasWeeklyAndMonthly);
+  writeNotNull('has_empty_bars', instance.hasEmptyBars);
+  writeNotNull('has_no_volume', instance.hasNoVolume);
+  writeNotNull('volume_precision', instance.volumePrecision);
+  writeNotNull('data_status', instance.dataStatus);
+  writeNotNull('expired', instance.expired);
+  writeNotNull('expiration_date', instance.expirationDate);
+  writeNotNull('sector', instance.sector);
+  writeNotNull('industry', instance.industry);
+  writeNotNull('currency_code', instance.currencyCode);
+  writeNotNull('original_currency_code', instance.originalCurrencyCode);
+  return val;
+}
+
+K _$enumDecode<K, V>(
+  Map<K, V> enumValues,
+
+
     }
   }
 
