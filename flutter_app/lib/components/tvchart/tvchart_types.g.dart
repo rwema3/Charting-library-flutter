@@ -236,7 +236,6 @@ K _$enumDecode<K, V>(
   Map<K, V> enumValues,
 
 
-
 Map<String, dynamic> _$FavoritesToJson(Favorites instance) => <String, dynamic>{
       'intervals': instance.intervals,
       'chartTypes': instance.chartTypes,
