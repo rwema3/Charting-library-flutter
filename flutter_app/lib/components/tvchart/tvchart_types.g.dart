@@ -236,6 +236,29 @@ K _$enumDecode<K, V>(
   Map<K, V> enumValues,
 
 
+
+Map<String, dynamic> _$FavoritesToJson(Favorites instance) => <String, dynamic>{
+      'intervals': instance.intervals,
+      'chartTypes': instance.chartTypes,
+    };
+
+TimeFrameItem _$TimeFrameItemFromJson(Map<String, dynamic> json) =>
+    TimeFrameItem(
+      text: json['text'] as String,
+      resolution: json['resolution'] as String,
+      description: json['description'] as String?,
+      title: json['title'] as String?,
+    );
+
+Map<String, dynamic> _$TimeFrameItemToJson(TimeFrameItem instance) {
+  final val = <String, dynamic>{
+    'text': instance.text,
+    'resolution': instance.resolution,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
     }
   }
 
