@@ -362,6 +362,56 @@ ChartingLibraryWidgetOptions _$ChartingLibraryWidgetOptionsFromJson(
       enabledFeatures: (json['enabled_features'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
+      fullscreen: json['fullscreen'] as bool?,
+      height: json['height'] as int?,
+      locale: json['locale'] as String,
+      numericFormatting: json['numeric_formatting'] == null
+          ? null
+          : NumericFormattingParams.fromJson(
+              json['numeric_formatting'] as Map<String, dynamic>),
+      savedData: json['saved_data'] as Map<String, dynamic>?,
+      savedDataMetaInfo: json['saved_data_meta_info'] == null
+          ? null
+          : SavedStateMetaInfo.fromJson(
+              json['saved_data_meta_info'] as Map<String, dynamic>),
+      studiesAccess: json['studies_access'] == null
+          ? null
+          : AccessList.fromJson(json['studies_access'] as Map<String, dynamic>),
+      studyCountLimit: json['study_count_limit'] as int?,
+      symbolSearchRequestDelay: json['symbol_search_request_delay'] as int?,
+      timeframe: json['timeframe'] as String?,
+      timezone: _$enumDecodeNullable(_$TimezoneEnumMap, json['timezone']),
+      toolbarBg: json['toolbar_bg'] as String?,
+      width: json['width'] as int?,
+      chartsStorageUrl: json['charts_storage_url'] as String?,
+      chartsStorageApiVersion: json['charts_storage_api_version'] as String?,
+      clientId: json['client_id'] as String?,
+      userId: json['user_id'] as String?,
+      loadLastChart: json['load_last_chart'] as bool?,
+      studiesOverrides: json['studies_overrides'] as Map<String, dynamic>?,
+      overrides: json['overrides'] as Map<String, dynamic>?,
+      snapshotUrl: json['snapshot_url'] as String?,
+      preset: json['preset'] as String?,
+      timeFrames: json['time_frames'] == null
+          ? null
+          : TimeFrameItem.fromJson(json['time_frames'] as Map<String, dynamic>),
+      customCssUrl: json['custom_css_url'] as String?,
+      favorites: json['favorites'] == null
+          ? null
+          : Favorites.fromJson(json['favorites'] as Map<String, dynamic>),
+      loadingScreen: json['loading_screen'] == null
+          ? null
+          : LoadingScreenOptions.fromJson(
+              json['loading_screen'] as Map<String, dynamic>),
+      theme: _$enumDecodeNullable(_$ChartThemeEnumMap, json['theme']),
+      compareSymbols: (json['compare_symbols'] as List<dynamic>?)
+          ?.map((e) => CompareSymbol.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$ChartingLibraryWidgetOptionsToJson(
+    ChartingLibraryWidgetOptions instance) {
+  final val = <String, dynamic>{
 
 Map<String, dynamic> _$FavoritesToJson(Favorites instance) => <String, dynamic>{
       'intervals': instance.intervals,
